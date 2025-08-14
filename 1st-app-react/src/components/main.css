@@ -1,0 +1,248 @@
+.maincomp {
+  font-size: 1.1rem;
+  display: flex;
+  height: 100%;
+  background-color: none;
+}
+.location {
+  background-color: rgb(66, 66, 66);
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 11%;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  
+}
+.changeLocation {
+  margin-left: auto;
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 8px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  padding: 1%;
+}
+.changeLocation p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.changeLocation:hover {
+  background-color: #aca7a7;
+  transition: 0.3s all ease;
+}
+.weatherpart {
+  justify-content: center;
+  background-color: none; /* semi-transparent */
+
+  height: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  margin: 2%;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.weather {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+.weathersection {
+  height: auto;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.accWeather {
+  font-size: 2rem;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  border-radius: 10px;
+  margin: 2%;
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  backdrop-filter: blur(10px); /* blur the background */
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.clouds {
+  width: 100%;
+  padding: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  border-radius: 10px;
+  margin: 2%;
+  -webkit-backdrop-filter: blur(20px); /* for Safari */
+  backdrop-filter: blur(20px); /* blur the background */
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.condition {
+  width: 100%;
+  padding: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid;
+  border-radius: 10px;
+  margin: 2%;
+  -webkit-backdrop-filter: blur(20px); /* for Safari */
+  backdrop-filter: blur(20px); /* blur the background */
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.AQIpart {
+  display: flex;
+  width: 40%;
+  padding: 5%;
+}
+.detailsofAQI {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+width: 100%;
+padding-top: 30%;
+  gap: 2%;
+  border: 2px solid;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(20px); /* for Safari */
+  backdrop-filter: blur(20px); /* blur the background */
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+font-size: 1.3rem;
+}
+.aipart {
+  background-color: none;
+  height: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  margin: 2%;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.aihead {
+  background-color: rgb(66, 66, 66);
+  color: rgb(255, 255, 255);
+  height: 11%;
+  width: 100%;
+  display: flex;
+  padding: 5%;
+  padding-top: 4%;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 2%;
+}
+.summary {
+  margin: 2%;
+  padding: 3%;
+  border: 2px solid;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  backdrop-filter: blur(10px); /* blur the background */
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.loadingscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7); /* transparent dark background */
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* always above everything */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.loadingscreen.load {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (max-width: 950px) {
+  .aihead {
+    font-size: 1rem;
+    padding: 2%;
+  }
+  .changeLocation {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 900px) {
+  .maincomp {
+    flex-direction: column;
+    font-size: 0.9rem;
+  }
+  .weatherpart,
+  .aipart {
+    width: 100%;
+  }
+  .aihead {
+    font-size: 1.2rem;
+    padding: 2%;
+  }
+  .changeLocation {
+    font-size: 0.7rem;
+  }
+}
+h1,
+h2,
+.heading {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+}
+body,
+p,
+.ai-text,
+.weather-text {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+}
+button,
+.label {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+}
+.dark .weatherpart,
+.dark .aipart {
+  background-color: #232323;
+  border-color: #ffffff;
+  transition: 0.3s;
+}
+.dark .maincomp {
+  background-color: #393838;
+  color: white;
+  transition: 0.5s;
+}
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+  pointer-events: none;
+}
