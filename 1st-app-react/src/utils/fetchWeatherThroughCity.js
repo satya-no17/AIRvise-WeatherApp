@@ -7,7 +7,7 @@ const getWeatherThroughCity = async (
   if (city) {
     setLoading(true);
     try {
-      const res = await fetch("http://weather-backend-xev9.onrender.com/CityWeather", {
+      const res = await fetch("https://weather-backend-xev9.onrender.com/CityWeather", {
         method: "POST",
         headers: {
           "content-type": "application/json",
