@@ -2,7 +2,7 @@
       if (loc.latitude && loc.longitude) {
         setLoading(true);
         try {
-          const res = await fetch("http://localhost:3000/location", {
+          const res = await fetch("http://weather-backend-xev9.onrender.com/location", {
             method: "POST",
             headers: {
               "content-type": "application/json",

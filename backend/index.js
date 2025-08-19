@@ -7,7 +7,7 @@ import searchResult from "./SearchWeatherThroughcity.js";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 const IQ_API = process.env.IQ_API
 const KEY = process.env.OW_KEY 
 const AI_KEY= process.env.AI_KEY
